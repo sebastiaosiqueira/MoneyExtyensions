@@ -4,6 +4,24 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <PackageId>MoneyExtensions</PackageId>
+    <Version>1.0.0</Version>
+    <License>MIT</License>
+    <Authors>Sebastiao Siqueira</Authors>
+    <Company>sebastiaodev</Company>
+    <PackageDescription>Extensions to covnert decimal to integer</PackageDescription>
+    <Description>Extensions to covnert decimal to integer</Description>
+    <RepositoryUrl>https://github.com/sebastiaosiqueira/MoneyExtyensions</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/sebastiaosiqueira/MoneyExtyensions</PackageProjectUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageTags>money;int;decimal;converter</PackageTags>
+    <Title>MoneyExtensions</Title>
+    <Summary>Extensions to covnert decimal to integer</Summary>
   </PropertyGroup>
+
+  <ItemGroup>
+  <None Include="..\Media\icon.png" Pack="true" PackagePath="\"></None>
+  </ItemGroup>
 
 </Project>

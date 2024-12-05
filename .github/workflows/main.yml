@@ -1,0 +1,30 @@
+name: Build and deploy package
+
+on: 
+  push:
+    branches:
+      - main
+
+jobs:
+   build-and-deploy:
+      runs-on: ubuntu-latest
+
+      steps:
+        - uses: actions/checout@main
+
+        - name: Set up .Net Core
+          uses: actions/setup-dotnet@v2
+          with:
+            dotnet-version: '6.0.x'
+
+        - name: Build with dotnet
+          run: dotnet build --configuration Release 
+
+        - name: Test
+          run: dotnet test
+
+        - name: Create the Package
+          run: dotnet pack --configuration Release
+
+        -name: Publish
+          run: dotnet nuget push "MoneyExtension/bin/Release/*.nupkg" -K ${{secrets.NUGET_TOKEN}} -S https://api.nuget.org/v3/index.json
