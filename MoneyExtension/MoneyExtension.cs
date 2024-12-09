@@ -7,11 +7,11 @@ public static class Money
             if(amount <= 0)
             return 0;
 
-            var text = amount.ToString(format:"N2").Replace(oldValue:",", newValue:"").Replace(oldValue:".",newValue:"");
-            if(string.IsNullOrEmpty(text))
+            var valeu = amount.ToString(format:"N2").Replace(oldValue:",", newValue:"").Replace(oldValue:".",newValue:"");
+            if(string.IsNullOrEmpty(valeu))
             return 0;
 
-            int.TryParse(text, out var result );
+            int.TryParse(valeu, out var result );
             return result;
        
     }
